@@ -11,4 +11,8 @@ export class HomePage {
 
   }
 
+  openPage(page: any){
+    this.navCtrl.push(page);
+  }
+
 }

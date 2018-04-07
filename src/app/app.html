@@ -1,1 +1,46 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+        <ion-header>
+          <ion-toolbar>
+              
+            <ion-title>Menu</ion-title>
+            <button ion-button menuToggle icon-only>
+                    <ion-icon name='md-arrow-round-back'></ion-icon>
+            </button>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list class="main-list">
+                        <button ion-item (click)="openPage(HomePage)">
+                                <ion-icon name="ios-home" item-start></ion-icon>
+                                Welcome
+                        </button>
+                        <button ion-item (click)="openPage(homePage)">
+                                <ion-icon name="ios-quote" item-start></ion-icon>
+                                About
+                        </button>
+                        <button ion-item (click)="openPage(homePage)">
+                                <ion-icon name="ios-call" item-start></ion-icon>
+                                Contact
+                        </button>
+            <button ion-item (click)="openPage(friendsPage)">
+                    <ion-icon name="ios-book" item-start></ion-icon>
+              Privacy Policy
+            </button>
+        </ion-list>
+        <ion-item-divider color="light"></ion-item-divider>
+            <ion-list>
+                    <button ion-item (click)="openPage(eventsPage)">
+                            <ion-icon name="ios-star" item-start></ion-icon>
+                      Rate
+                    </button>
+                    <button ion-item (click)="closeMenu()">
+                            <ion-icon name="md-close" item-start></ion-icon>
+                            Close
+                    </button>
+            </ion-list>
+        </ion-content>
+      </ion-menu>
+      
+      <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+      
+      
